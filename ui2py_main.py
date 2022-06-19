@@ -128,7 +128,7 @@ class MainUi(QObject):
         try:
             startupinfo = subprocess.STARTUPINFO()
             startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
-            process = subprocess.Popen(f'pyuic5 -x -o {out_file} {in_file}',
+            process = subprocess.Popen(f'pyuic6 -x -o {out_file} {in_file}',
                                        startupinfo=startupinfo)
             print("Ran Subprocess")
         except Exception as error:
