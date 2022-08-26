@@ -11,8 +11,8 @@ Converts PYQT5 Designer UI file to Python PY file
 import sys
 import os
 import subprocess
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import pyqtSignal, pyqtSlot, QObject
+from PyQt6 import QtWidgets
+from PyQt6.QtCore import pyqtSignal, pyqtSlot, QObject
 from ui2py_gui import Ui_MainWindow
 
 
@@ -29,7 +29,7 @@ class MainUi(QObject):
         self.widget_actions()
 
         self.MainWindow.show()
-        sys.exit(app.exec_())
+        sys.exit(app.exec())
 
     def widget_actions(self):
         self.ui.button_about.clicked.connect(self.show_about)
